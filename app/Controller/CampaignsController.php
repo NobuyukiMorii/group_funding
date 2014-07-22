@@ -4,9 +4,7 @@ class CampaignsController extends AppController {
 	//ホーム画面
 	public function index() {
 		//レイアウトは使う
-		// $this->layout = 'jquerymobile';
-		//レイアウトは使わない
-		$this->autoLayout = false;
+		$this->layout = 'jquerymobile';
 		//ビューは表示する
         $this->autoRender = true;
         //ページタイトルを定義
