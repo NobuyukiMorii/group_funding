@@ -224,8 +224,8 @@ html .ui-alt-icon .ui-radio-off:after {
 html .ui-bar-a .ui-bar-inherit,
 html .ui-body-a .ui-bar-inherit,
 html body .ui-group-theme-a .ui-bar-inherit {
-	background-color: #f5f4f4 /*{a-bar-background-color}*/;
-	border-color: #ece9e9 /*{a-bar-border}*/;
+	background-color: #ffffff /*{a-bar-background-color}*/;
+	border-color: #ffffff /*{a-bar-border}*/;
 	color: #f56814 /*{a-bar-color}*/;
 	text-shadow: 0 /*{a-bar-shadow-x}*/ 1px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #eeeeee /*{a-bar-shadow-color}*/;
 	font-weight: bold;
@@ -239,7 +239,7 @@ html body .ui-group-theme-a .ui-bar-inherit {
 .ui-page-theme-a,
 .ui-page-theme-a .ui-panel-wrapper {
 	background-color: #ffffff /*{a-page-background-color}*/;
-	border-color: #ece9e9 /*{a-page-border}*/;
+	border-color: #ffffff /*{a-page-border}*/;
 	color: #000000 /*{a-page-color}*/;
 	text-shadow: 0 /*{a-page-shadow-x}*/ 1px /*{a-page-shadow-y}*/ 0 /*{a-page-shadow-radius}*/ #eeeeee /*{a-page-shadow-color}*/;
 }
@@ -256,8 +256,8 @@ html .ui-panel-page-container-a {
 	text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ #f3f3f3 /*{a-body-shadow-color}*/;
 }
 .ui-body-a {
-	border-width: 1px;
-	border-style: solid;
+	border-width: 0px;
+	border-style: none;
 }
 /* Links */
 .ui-page-theme-a a,

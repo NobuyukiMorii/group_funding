@@ -14,13 +14,6 @@ class PageTitleComponent extends Component {
         ),
     );
 
-/**
- * ページタイトルを設定する
- *
- * @param Controller $controller A reference to the instantiating controller object
- * @return string
- * @access public
- */
     public function getPageTitle(Controller $controller) {
         return !empty($this->pageTitles[$controller->name][$controller->action])
             ? $this->pageTitles[$controller->name][$controller->action]

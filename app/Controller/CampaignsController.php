@@ -1,15 +1,27 @@
 <?php
 class CampaignsController extends AppController {
+	//使うコンポーネントを定義
+	public $components = array('Common');
 
-	//ホーム画面
+	//ページタイトル
 	public function index() {
 		//レイアウトは使う
 		$this->layout = 'jquerymobile';
 		//ビューは表示する
         $this->autoRender = true;
-        //ページタイトルを定義
+
 
 	}
+
+	//ホーム画面
+	public function home() {
+		//レイアウトは使う
+		$this->layout = 'jquerymobile';
+		//ビューは表示する
+        $this->autoRender = true;
+        //
+
+	}	
 
 	//キャンペーンの入力画面
 	public function create() {

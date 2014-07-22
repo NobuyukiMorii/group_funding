@@ -32,7 +32,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	public $components = array('DebugKit.Toolbar','PageTitle');
+	public $components = array('DebugKit.Toolbar','PageTitle','Session');
 
 	//ページタイトルの定義
     public function beforeRender() {

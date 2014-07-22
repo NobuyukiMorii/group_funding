@@ -1,0 +1,28 @@
+p#page_title {
+color: #ff6600;
+text-align: center;
+font-size: 300%;
+margin-bottom: 10px;
+}
+
+p#page_title_description {
+color: #333333;
+text-align: center;
+font-size: 100%;
+}
+
+.box{ 
+  position:rerative;
+  background-color:#ffffff;
+  min-width: 300px; 
+  min-height: 240px;  
+ }
+.centered {
+  position: absolute;
+  width:300px;
+  height:240px;
+  margin-top:-120px;
+  margin-left:-150px;
+  top: 50%;
+  left: 50%;
+}
