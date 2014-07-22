@@ -32,6 +32,12 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	public $components = array('DebugKit.Toolbar');
+	public $components = array('DebugKit.Toolbar','PageTitle');
+
+	//ページタイトルの定義
+    public function beforeRender() {
+        parent::beforeRender();
+        $this->set('title_for_layout', $this->PageTitle->getPageTitle($this));
+    }
 
 }

@@ -1,43 +1,30 @@
 <?php
 class CampaignsController extends AppController {
 
+	//ホーム画面
 	public function index() {
+		//レイアウトは使う
+		// $this->layout = 'jquerymobile';
 		//レイアウトは使わない
 		$this->autoLayout = false;
 		//ビューは表示する
         $this->autoRender = true;
+        //ページタイトルを定義
 
 	}
 
+	//キャンペーンの入力画面
 	public function create() {
-		//レイアウトは使う
+		//レイアウトは使わない
 		$this->autoLayout = true;
 		//ビューは表示する
         $this->autoRender = true;
+        //ページタイトルを定義
+
 
 	}
 
-	public function project() {
-		//レイアウトは使う
-		$this->autoLayout = true;
-		//ビューは表示する
-        $this->autoRender = true;
-        //変数が入っていなければ前のページに戻らせる
-        if(empty($this->request->data)) {
-        	return $this->redirect(array('controller' => 'campaigns', 'action' => 'create'));
-        }
-        //変数を受け取る
-        $data = $this->request->data;
-        //データを変数に保存
-        $data = $this->request->data;
-        //データをデータベースに保存する
-        $this->Campaign->saveAll($data);
-        //ビューに変数を渡す
-        $this->set('data',$data);
-
-	}
-
-
+	//生成したURLを表示する画面
 
 
 
