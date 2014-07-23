@@ -1,6 +1,3 @@
-<!-- アイコンのCSSを読み込み -->
-<?php echo $this->Html->css('glyphish_icon.css');?>
-
 <div data-role="page" data-theme="a">
 	<!-- モバイル用のヘーダーを読み込み -->
 <?php echo $this->element('mobile_header'); ?>
