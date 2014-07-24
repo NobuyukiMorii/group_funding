@@ -13,6 +13,16 @@ class CampaignsController extends AppController {
 
 	}
 
+	//ログインしていないt時の画面
+	public function pre_login() {
+		//レイアウトは使う
+		$this->layout = 'jquerymobile';
+		//ビューは表示する
+        $this->autoRender = true;
+        //
+
+	}
+
 	//ホーム画面
 	public function home() {
 		//レイアウトは使う

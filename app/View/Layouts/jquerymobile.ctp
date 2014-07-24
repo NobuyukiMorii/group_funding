@@ -11,6 +11,7 @@
     <?php echo $this->Html->css('style.css');?>
     <?php echo $this->Html->script('jquery-2.1.1.js');?>
     <?php echo $this->Html->script('jquery.mobile-1.4.3.js');?>
+    <?php echo $this->Html->script('prevent_scroll.js');?>
 	<?php echo $this->fetch('meta');?>
 	<?php echo $this->fetch('css');?>
 	<?php echo $this->fetch('script');?>

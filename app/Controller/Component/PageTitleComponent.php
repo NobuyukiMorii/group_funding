@@ -6,17 +6,17 @@ class PageTitleComponent extends Component {
 
     public $pageTitles = array(
         'Campaigns' => array(
-            'index'   => 'CrowdFun'
+            'index'   => 'Group Fun!'
         ),
         'Users' => array(
-            'login'   => 'CrowdFun',
-            'logout'   => 'CrowdFun',
+            'login'   => 'Group Fun!',
+            'logout'   => 'Group Fun!',
         ),
     );
 
     public function getPageTitle(Controller $controller) {
         return !empty($this->pageTitles[$controller->name][$controller->action])
             ? $this->pageTitles[$controller->name][$controller->action]
-            : 'CrowdFun';
+            : 'Group Fun!';
     }
 }

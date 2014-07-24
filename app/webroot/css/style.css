@@ -12,7 +12,40 @@ margin-bottom: 10px;
 margin-top: 51px;
 }
 
-
 .upper_footer {
 margin-bottom: 40px;
+}
+
+.upper_footer_pre_login {
+margin-bottom: 76px;
+}
+
+#color-orange {
+background-color: #ff6600;
+color: #ffffff;
+font-size: 70%;
+}
+
+.ui-icon-fb:after {
+  background-image: url("../img/facebook.png");
+  background-color: transparent;
+  background-size: contain;
+}
+
+.agreement_upper {
+	font-size: 50%;
+	color: #a19b9b;
+	margin: 0px;
+}
+
+.agreement_lower {
+	font-size: 50%;
+	color: #565353;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	text-decoration: none;
+}
+
+.text_decoration_none {
+	text-decoration: none;
 }
