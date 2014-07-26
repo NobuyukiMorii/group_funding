@@ -15,7 +15,7 @@
 	<?php echo $this->fetch('css');?>
 	<?php echo $this->fetch('script');?>
 </head>
-<body>
+<body >
 
 <?php echo $this->Session->flash(); ?>
 <?php echo $this->fetch('content'); ?>

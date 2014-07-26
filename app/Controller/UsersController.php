@@ -5,6 +5,14 @@ class UsersController extends AppController {
 
 	}
 
+	public function email_signup() {
+		//レイアウトは使う
+		$this->layout = 'jquerymobile';
+		//ビューは表示する
+        $this->autoRender = true;
+
+	}
+
 	public function email_login() {
 		//レイアウトは使う
 		$this->layout = 'jquerymobile';

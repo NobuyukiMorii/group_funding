@@ -12,15 +12,15 @@
     	<!--画像の読み込み-->
 		<img src="../img/orange_ball.gif" width="20%" alt="icon" class="appIconBig"/>
 		<!-- テキスト（大） -->
-		<h2 class="login_description">Group Funにログイン</h2>
+		<h2 class="login_description">Group Funをはじめる</h2>
 		<!-- テキスト（小） -->
-		<p class="login_description_small">サインアップは<a href="">こちら</a>から</p>
+		<p class="login_description_small">ログインは<a href="">こちら</a>から</p>
 		<!-- フォーム -->
 		<form action="" method="post" class="login_form_mobile">
 			<fieldset>
 				<input type="text" name="name" placeholder="email address" value="" />
 				<input type="text" name="name" placeholder="password" value="" />
-				<button type="submit" name="submit" data-inline="true" id="orange_button">ログイン</button>
+				<button type="submit" name="submit" data-inline="true" id="orange_button">サインアップ</button>
 			</fieldset>
 		</form>
 		<!-- パスワードを忘れたとき -->

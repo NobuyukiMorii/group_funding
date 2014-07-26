@@ -41,11 +41,7 @@ class CampaignsController extends AppController {
         $this->autoRender = true;
         //ページタイトルを定義
 
-
 	}
-
-	//生成したURLを表示する画面
-
 
 
 }
