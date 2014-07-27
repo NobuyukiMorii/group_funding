@@ -33,13 +33,16 @@ class CampaignsController extends AppController {
 
 	}	
 
-	//キャンペーンの入力画面
+	//ホーム画面
 	public function create() {
-		//レイアウトは使わない
-		$this->autoLayout = true;
+		//レイアウトは使う
+		$this->layout = 'jquerymobile';
 		//ビューは表示する
         $this->autoRender = true;
-        //ページタイトルを定義
+        //リクエストデータの読み込み
+        $foo = $this->request->data;
+        $this->set(compact('foo'));
+ 
 
 	}
 
