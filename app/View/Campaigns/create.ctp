@@ -12,14 +12,12 @@
                 <legend>投資スタイル</legend>
                     <label for="radio-choice-1">任意</label>
                     <input type="radio" name="style" value="0" id="radio-choice-1" onclick="entryChange();"checked="checked"/>
-                    <label for="radio-choice-2">同額</label>
+                    <label for="radio-choice-2">均一</label>
                     <input type="radio" name="style" value="1" id="radio-choice-2" onclick="entryChange();"/>
-                    <label for="radio-choice-3">割勘</label>
-                    <input type="radio" name="style" value="2" id="radio-choice-3" onclick="entryChange();" />
             </fieldset>
 
             <!-- お金を集める目的 -->
-            <legend>イベント名</legend>
+            <legend>プロジェクト名</legend>
             <input type="text" name="title" value="" data-mini=“true”/>
             <!-- 期限 -->
             <legend>期限</legend>
@@ -56,18 +54,6 @@
                 <legend>目標金額（最大）</legend>
                 <input type="text" name="max_collect_amount" value="" data-mini=“true”/>
 
-            </div>
-
-            <div id="thirdBox">
-                <!-- 集める額 -->
-                <legend>目標金額</legend>
-                <input type="text" name="max_collect_amount" value="" data-mini=“true”/>
-                <!-- 一人当たりの金額 -->
-                <legend>最小人数</legend>
-                <input type="text" name="mini_split_number" value="" data-mini=“true”/>
-                <!-- 最大割り勘人数 -->
-                <legend>最大人数</legend>
-                <input type="text" name="max_split_number" value="" data-mini=“true”/>
             </div>
         
         <button type="submit" id="fun_button"/>Fun!</button>

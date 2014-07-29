@@ -33,7 +33,7 @@ class CampaignsController extends AppController {
 
 	}	
 
-	//ホーム画面
+	//作成フォーム
 	public function create() {
 		//レイアウトは使う
 		$this->layout = 'jquerymobile';
@@ -42,9 +42,23 @@ class CampaignsController extends AppController {
         //リクエストデータの読み込み
         $foo = $this->request->data;
         $this->set(compact('foo'));
- 
+	}
+	//確認画面
+	public function create_confirm() {
+		//レイアウトは使う
+		$this->layout = 'jquerymobile';
+		//ビューは表示する
+        $this->autoRender = true;
 
 	}
 
+	//プロジェクトが生成された画面
+	public function create_live() {
+		//レイアウトは使う
+		$this->layout = 'jquerymobile';
+		//ビューは表示する
+        $this->autoRender = true;
+
+	}
 
 }
