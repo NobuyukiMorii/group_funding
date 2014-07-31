@@ -61,4 +61,19 @@ class CampaignsController extends AppController {
 
 	}
 
+	//キャンペーンの進行状況
+	public function check_progress() {
+		//レイアウトは使う
+		$this->layout = 'jquerymobile';
+		//ビューは表示する
+        $this->autoRender = true;
+	}
+
+	public function enter_amount() {
+		//レイアウトは使う
+		$this->layout = 'jquerymobile';
+		//ビューは表示する
+        $this->autoRender = true;
+	}
+
 }

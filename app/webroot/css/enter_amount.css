@@ -1,0 +1,73 @@
+.under_header_login {
+margin-top: 70px;
+}
+
+.upper_footer {
+margin-bottom: 40px;
+}
+
+.appIconBig{
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.login_description {
+color: #828282;
+text-align: center;
+margin: 10px 0px 0px 0px;
+}
+
+.login_description_small {
+color: #828282;
+font-size: 50%;
+text-align: center;
+margin: 0px 0px 0px 0px;
+}
+
+.login_description_small {
+color: #828282;
+font-size: 50%;
+text-align: center;
+margin: 0px 0px 0px 0px;
+}
+
+.login_form_mobile {
+margin-top: 30px;
+margin-bottom: 0px;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+width:85%; 
+}
+
+button#orange_button {
+margin-top: 30px;
+background-color: #ff6600 /*{a-bup-background-color}*/;
+border-color: #ece9e9 /*{a-bup-border}*/;
+color: #ffffff /*{a-bup-color}*/;
+text-shadow: 0 /*{a-bup-shadow-x}*/ 1px /*{a-bup-shadow-y}*/ 0 /*{a-bup-shadow-radius}*/ #f3f3f3 /*{a-bup-shadow-color}*/;
+}
+
+.forget_password_guide {
+color: #ff6600;
+font-size: 50%;
+text-align: center;
+margin: 0px;
+text-decoration:underline;
+color:#ff6600;
+}
+
+.horizon {
+height: 1px;
+background-color: #bababa;
+border: none;
+color: #bababa;
+margin-top: 15px;
+margin-bottom:15px;
+}
+
+.box {
+	margin-left: 5%;
+	margin-right: 5%;
+}
