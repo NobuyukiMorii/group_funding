@@ -1,0 +1,38 @@
+.check {
+    width:100px;
+    display:block;
+	margin:auto;
+	padding-top: 30px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#live-text {
+	padding-top: 0px;
+	font-size: 300%; 
+	text-align: center;
+	color:#ffffff;
+}
+.box {
+	margin-left: 5%;
+	margin-right: 5%
+}
+
+.project_title {
+	color:#ff6600;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;	
+}
+
+.share_guide {
+	color:#bababa;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.textarea-posision {
+	margin-top: 40px;
+}

@@ -24,5 +24,4 @@ class CommonComponent extends Component {
     }
 
 
-
 }
