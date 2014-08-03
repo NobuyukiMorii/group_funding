@@ -1,6 +1,3 @@
-<?php echo $this->Html->css('responsive-table');?>
-<?php echo $this->Html->css('create_confirm');?>
-
 <style type="text/css">
 .background_img {
 width: 100%;
@@ -21,7 +18,7 @@ margin-right : auto ;
 		<div class="background_img"></div>
 		<div id="user" style="margin : -50px 0px 0px 0px"></div><div id="name">前川千里</div>
 		
-		<div class="box">
+		<div class="box3">
 			<h4 class="project_title"><?php echo h($this->request->data['Campaign']['name']);?></h4>
 
 			<h5 class="percentage">0%</h5>
@@ -33,7 +30,7 @@ margin-right : auto ;
 			<h6 class="collect-money">合計：<?php echo h(number_format($this->request->data['Campaign']['small_sum']));?>円</h6>
 		</div>
 		<hr>
-		<div class="box2">
+		<div class="box4">
 
 			<table class="table table-striped table-responsive">
 			    <thead>
@@ -57,10 +54,7 @@ margin-right : auto ;
 			</table>
 
 			<h5 class="detail"><?php echo h($this->request->data['Campaign']['description']);?></h5>
-		</div>
-	  	<!-- フッターの読み込み -->
-	  	<div data-id="common_footer" data-role="footer" data-position="fixed" data-fullscreen="true" data-position="inline" class="position-center">
-				<a href="<?php echo $this->Html->url("/Campaigns/create_live") ;?>">確定する</a>
+			<a href="<?php echo $this->Html->url("/Campaigns/create_live") ;?>" rel="external" data-role="button">確定する</a>
 		</div>
 
 	</div>

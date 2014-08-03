@@ -1,4 +1,13 @@
-<?php echo $this->Html->css('create_live') ;?>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=828906960467092&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 
 <style type="text/css">
 .background_img {
@@ -26,6 +35,8 @@
 		<div class="box">
 			<textarea class="textarea-posision">http://mory.weblike.jp/group_funding/campaigns/</textarea>
 		</div>
+
 	</div>
+
 	<?php echo $this->element('start_share_footer'); ?>
 </div>

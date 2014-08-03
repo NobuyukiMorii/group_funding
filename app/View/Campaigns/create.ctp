@@ -1,5 +1,3 @@
-<?php echo $this->Html->script('create');?>
-
 <div data-role="page" data-theme="a">
 
 	<!-- コンテンツの読み込み -->
@@ -17,7 +15,7 @@
 
             <!-- お金を集める目的 -->
             <legend>プロジェクト名</legend>
-            <input type="name" name="data[Campaign][name]" value="" data-mini=“true”/>
+            <input type="text" name="data[Campaign][name]" value=""  data-mini=“true”/>
             <!-- 期限 -->
             <legend>期限</legend>
             <!-- 初期値はn日後ぼ日付 -->
