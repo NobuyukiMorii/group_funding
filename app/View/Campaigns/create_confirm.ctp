@@ -27,7 +27,7 @@ margin-right : auto ;
 			
 			<div class="clock-icon"></div>
 			<h6 class="rest-time">残り<?php echo $this->Common->calculate($this->request->data['Campaign']['time_limit']) ;?>日</h6>
-			<h6 class="collect-money">合計：<?php echo h(number_format($this->request->data['Campaign']['small_sum']));?>円</h6>
+			<h6 class="collect-money">目標（最低）：<?php echo h(number_format($this->request->data['Campaign']['small_sum']));?>円</h6>
 		</div>
 		<hr>
 		<div class="box4">

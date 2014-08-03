@@ -1,14 +1,3 @@
-<div id="fb-root"></div>
-<script>
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=828906960467092&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
-
 <style type="text/css">
 .background_img {
 	width: 100%;
@@ -32,11 +21,16 @@
 		</div>
 		<h4 class="project_title"><?php echo h($data['Campaign']['name']);?></h4>
 		<h4 class="share_guide">のURLをグループにSHARE！</h4>
-		<div class="box">
+		<div class="box5">
 			<textarea class="textarea-posision">http://mory.weblike.jp/group_funding/campaigns/</textarea>
 		</div>
+		<a href="http://www.facebook.com/sharer.php?u=`http://mory.weblike.jp/group_funding/Campaigns/create_live`&amp;t=`Group Fun!`"
+		onClick="window.open(encodeURI(decodeURI(this.href)),'sharewindow','width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!'
+	      ); return false;"data-role="button">
+	    Facebookでshare
+		</a>
+		<a href="<?php echo $this->Html->url("/Campaigns/home") ;?>" rel="external" data-role="button">トップ画面に戻る</a>
 
 	</div>
 
-	<?php echo $this->element('start_share_footer'); ?>
 </div>

@@ -69,7 +69,7 @@ class DATABASE_CONFIG {
 		'password' => 'asdfghjkl7',
 		'database' => 'LAA0489779-groupfunding',
 		'prefix' => '',
-		//'encoding' => 'utf8',
+		'encoding' => 'utf8',
 	);
 
 	public $test = array(
@@ -80,6 +80,6 @@ class DATABASE_CONFIG {
 		'password' => 'asdfghjkl7',
 		'database' => 'LAA0489779-groupfunding',
 		'prefix' => '',
-		//'encoding' => 'utf8',
+		'encoding' => 'utf8',
 	);
 }

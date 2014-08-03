@@ -3,8 +3,8 @@
 class User extends AppModel {
 
     public $name = 'User';
-
-    public $uses  = array('User','Campaign');
+    //ユーザーは今のところ独立（FundとCampaignに属されている）
+    public $uses  = array('User');
     
 
 }

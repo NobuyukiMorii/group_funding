@@ -15,5 +15,5 @@
     data-iconpos="left">
     Facebookでshare
 	</a>
-
+    
 </div>

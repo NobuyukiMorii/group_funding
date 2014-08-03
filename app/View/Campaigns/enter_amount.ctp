@@ -1,40 +1,50 @@
-<?php echo $this->Html->css('enter_amount');?>
 <?php echo $this->Html->script('common');?>
 
-<div data-role="page" data-theme="a" ontouchmove="event.preventDefault()">
-<!-- モバイル用のヘーダーを読み込み -->
-<?php echo $this->element('mobile_form_header'); ?>
+<style type="text/css">
+.background_img {
+	width: 100%;
+	height:200px;
+	background:url("<?=$this->Html->url('/Campaigns/image/'.h($data['Campaign']['id']))?>") no-repeat center;
+	background-size:cover;
+	margin-left : auto ;
+	margin-right : auto ;
+}
+</style>
+
+<div data-role="page" data-theme="a">
+
 	<!-- コンテンツの読み込み -->
-  	<div role="main" class="ui-content under_header_login upper_footer">
-    	<!--画像の読み込み-->
-		<img src="../img/orange_ball.gif" width="20%" alt="icon" class="appIconBig"/>
+  	<div role="main" class="ui-content">
+
+		<div class="background_img"></div>
+
 		<!-- テキスト（大） -->
-		<h4 class="login_description">小川陽子さんの誕生日プレゼント</h4>
-		<h4 class="login_description">にFun!</h4>
+		<h4 class="login_description"><?php echo h($data['Campaign']['name']) ;?></h4>
 		<!-- テキスト（小） -->
 		<p class="login_description_small">この段階ではまだ決済されません</p>
 		<hr class="horizon">
-
 		<div class="box">
 			<div data-role="fieldcontain">
-				<form action="#" style="display:inline;">
+				<form action="<?php echo $this->Html->url('detail/'.h($data['Campaign']['id'])) ;?>" style="display:inline;" method="post">
 					<label for='amount'>
-						<?php if(isset($somethig)) {
-							echo "800円をFunする";
-						} else {	
-							echo "Funしたい金額を入力してください！";
-						}
-						;?>					
-
-						<?php if(isset($somethig)) {
-							echo "";
-						} else {	
-							echo "<input type='range' name='amount' id='amount' value='800' min='800' max='8000'>";
+						<?php if(h($data['Campaign']['style']) == "uniform") {
+							echo h($data['Campaign']['payment'])."円をFunする";
+						} elseif (h($data['Campaign']['style']) == "optional"){	
+							echo "金額を入力してください！（最大".h(number_format($data['Campaign']['capital_sum']))."円）";
 						}
 						;?>
+						<?php if(h($data['Campaign']['style']) == "uniform") {
+							echo "<input type='hidden' name='data[Fund][amount]' value=".h($data['Campaign']['payment'])." >";
+						} elseif (h($data['Campaign']['style']) == "optional"){		
+							echo "<input type='range' name='data[Fund][amount]' id='amount' value=".h($data['Campaign']['payment'])." min=".h($data['Campaign']['payment'])." max=".h($data['Campaign']['capital_sum']).">";
+						}
+						;?>
+						<input type="hidden" name="data[Fund][user_id]" value="<?php echo h($data['Campaign']['user_id']) ;?>" name="user_id">
+						<input type="hidden" name="data[Fund][campaign_id]" value="<?php echo h($data['Campaign']['id']) ;?>" name="campaign_id">
+						<button type="submit" id="orange_button">Fun!</button>
 				</form>
 			</div>
-			<button type="submit" id="orange_button">Fun!</button>
+			
 		</div>
 
   	</div>

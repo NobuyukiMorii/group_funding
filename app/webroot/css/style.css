@@ -4,6 +4,14 @@ text-align: center;
 font-size: 120%;
 }
 
+.create_button_margin {
+margin: 0px;
+}
+
+.no-underline {
+text-decoration: none;
+}
+
 .margin_bottom_nav {
 margin-bottom: 10px;
 }
@@ -157,6 +165,7 @@ margin-right : auto ;
     background-repeat:no-repeat;
     z-index:1000;
 }
+
 #name {
 	position: absolute;
 	margin-top: -33px;
@@ -269,7 +278,7 @@ margin-right : auto ;
 	text-align: center;
 }
 
-.activity-box {
+.activity-box2 {
 	background-color: #ffffff;
 	border: 1px solid #bababa;
 	min-height:83px; 
@@ -325,14 +334,6 @@ border-color: #ece9e9 /*{a-bup-border}*/;
 color: #ffffff /*{a-bup-color}*/;
 }
 
-#user {
-    width:50px;
-    height:50px;
-    border-radius:100px;
-    background:url("../img/face.jpg");
-    background-repeat:no-repeat;
-    z-index:1000;
-}
 #name {
 	position: absolute;
 	margin-top: -33px;
@@ -361,23 +362,6 @@ color: #ffffff /*{a-bup-color}*/;
 	color: #ff6600;
 	margin-top: 0px;
 	margin-bottom: 3px;
-}
-.gray_bar {
-    width: 100%;
-    height: 5px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    background-color: #bababa;
-    border-radius: 2.5px 2.5px 2.5px 2.5px / 2.5px 2.5px 2.5px 2.5px;
-}
-
-.orange_bar {
-    width: 0%;
-    height: 5px;
-    margin-top: -5px;
-    margin-bottom: 0px;
-    background-color: #ff6600;
-    border-radius: 2.5px 2.5px 2.5px 2.5px / 2.5px 2.5px 2.5px 2.5px;
 }
 
 .clock-icon {
@@ -480,6 +464,7 @@ hr {
 
 .textarea-posision {
 	margin-top: 40px;
+	margin-bottom: 0px;
 }
 
 .under_header_login {
@@ -673,11 +658,10 @@ text-align: center;
 font-size: 100%;
 }
 
-.box{ 
+.box5{ 
   position:rerative;
   background-color:#ffffff;
-  min-width: 300px; 
-  min-height: 240px;  
+  min-width: 300px;  
  }
 .centered {
   position: absolute;
@@ -687,4 +671,9 @@ font-size: 100%;
   margin-left:-150px;
   top: 50%;
   left: 50%;
+}
+
+.pager {
+	margin-top: 0px;
+	margin-bottom: 20px;
 }
