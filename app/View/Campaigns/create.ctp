@@ -1,3 +1,4 @@
+<?php echo $this->Html->script('create') ;?>
 <div data-role="page" data-theme="a">
 
 	<!-- コンテンツの読み込み -->

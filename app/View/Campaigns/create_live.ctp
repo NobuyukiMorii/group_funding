@@ -22,7 +22,7 @@
 		<h4 class="project_title"><?php echo h($data['Campaign']['name']);?></h4>
 		<h4 class="share_guide">のURLをグループにSHARE！</h4>
 		<div class="box5">
-			<textarea class="textarea-posision">http://mory.weblike.jp/group_funding/campaigns/</textarea>
+			<textarea class="textarea-posision">http://mory.weblike.jp<?php echo $this->Html->url('Campaigns/detail'.$data['Campaign']['id']);?></textarea>
 		</div>
 		<a href="http://www.facebook.com/sharer.php?u=`http://mory.weblike.jp/group_funding/Campaigns/create_live`&amp;t=`Group Fun!`"
 		onClick="window.open(encodeURI(decodeURI(this.href)),'sharewindow','width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!'

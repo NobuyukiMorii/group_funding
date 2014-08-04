@@ -165,13 +165,12 @@ class CampaignsController extends AppController {
         $this->autoRender = true;
         //セッションからデータを取り出す
         $data = $this->Session->read('temp');
-        //ビューにデータを渡す
-        $this->set('data',$data);
         //データが格納されていない時は前の画面にリダイレクト
         if(empty($data)) {$this->redirect('/Campaigns/create_confirm');}
         //データを保存する
         $data = $this->Campaign->save($data);
-
+        //ビューにデータを渡す
+        $this->set('data',$data);
 
 	}
 
