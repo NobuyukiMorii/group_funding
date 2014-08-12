@@ -23,7 +23,15 @@ class CampaignsController extends AppController {
 		$this->layout = 'jquerymobile';
 		//ビューは表示する
         $this->autoRender = true;
-
+        //登録されているキャンペーンを全て検索する
+        $this->Paginator->settings = array(
+        	'conditions' => array('Campaign.status' => 0),
+            'limit' => 10
+        );
+        //ページネーターの値を変数に格納
+        $data = $this->Paginator->paginate('Campaign');
+        //変数に値を渡す
+        $this->set(compact('data'));
 	}
 
 	//ホーム画面
