@@ -1,4 +1,7 @@
 <?php
+
+App::import('Vendor','facebook',array('file' => 'facebook'.DS.'src'.DS.'facebook.php'));
+
 class CampaignsController extends AppController {
 	//使うモデル
 	public $uses = array('Campaign','User','Fund','Comment');
@@ -7,6 +10,14 @@ class CampaignsController extends AppController {
 	//ヘルパーの定義
 	public $helpers = array('Common','Html');
 
+ 	//Facebookに接続
+    private function createFacebook() {        //【8】appID, secretを記述
+        return new Facebook(array(
+            'appId' => '828906960467092',
+            'secret' => '65b2a9a9645ae2c741678da3bc79246d'
+        ));
+    }
+    
 	//ページタイトル
 	public function index() {
 		//レイアウトは使う
@@ -40,6 +51,10 @@ class CampaignsController extends AppController {
 		$this->layout = 'jquerymobile';
 		//ビューは表示する
         $this->autoRender = true;
+        //FBに接続
+        $facebook = $this->createFacebook(); //【2】アプリに接続
+        $myFbData = $this->Session->read('mydata');       //【3】facebookのデータ
+        $this->set('myFbData', $myFbData);
         //登録されているキャンペーンを全て検索する
         $this->Paginator->settings = array(
         	'conditions' => array('Campaign.status' => 0),
