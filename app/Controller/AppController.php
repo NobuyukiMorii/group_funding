@@ -55,7 +55,7 @@ class AppController extends Controller {
 	);
 	//DB接続前のフィルター
     public function beforeFilter(){//login処理の設定
-         $this->Auth->allow('email_signup','email_login','policy','facebook','createFacebook','logout','index');
+         $this->Auth->allow('email_signup','login','policy','facebook','createFacebook','logout','index');
          $this->set('user',$this->Auth->user()); // ctpで$userを使えるようにする 。
     }
 	//ページタイトルの定義

@@ -17,7 +17,7 @@
 		<p class="login_description_small">サインアップは<a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'email_signup')) ;?>" rel="external">こちら</a>から</p>
 		<?php echo $this->Session->flash('auth'); ?>
 		<!-- フォーム -->
-		<form action="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'email_login')) ;?>" method="post" class="login_form_mobile" data-ajax="false">
+		<form action="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'login')) ;?>" method="post" class="login_form_mobile" data-ajax="false">
 			<fieldset>
 				<input type="text" name="data[User][email]" placeholder="email address" value="" />
 				<input type="password" name="data[User][password]" placeholder="password" value="" />
