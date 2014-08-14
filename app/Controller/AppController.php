@@ -33,8 +33,22 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 	//コンポーネントの定義
 	public $components = array(
-			'DebugKit.Toolbar','PageTitle','Session');
-
+        'DebugKit.Toolbar', //デバッグきっと
+        'PageTitle',
+        'Session',
+        'Auth' => array( //ログイン機能を利用する
+            'authenticate' => array(
+                'Form' => array(
+                    'userModel' => 'User',
+                    'fields' => array('username' => 'email','password' => 'password')
+                )
+            ),
+	    )
+	);
+	//DB接続前のフィルター
+    public function beforeFilter(){//login処理の設定
+         $this->set('user',$this->Auth->user()); // ctpで$userを使えるようにする 。
+    }
 	//ページタイトルの定義
     public function beforeRender() {
         parent::beforeRender();

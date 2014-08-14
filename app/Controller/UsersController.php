@@ -7,26 +7,7 @@ class UsersController extends AppController {
 
 	public $components = array(
 	    'DebugKit.Toolbar', //デバッグきっと
-	    'Auth' => array( //ログイン機能を利用する
-	        'authenticate' => array(
-	            'Form' => array(
-	                'userModel' => 'User',
-	                'fields' => array('username' => 'email','password' => 'password')
-	            )
-	        ),
-	        //ログイン後の移動先
-	        'loginRedirect' => array('controller' => 'Campaigns', 'action' => 'home'),
-	        //ログアウト後の移動先
-	        'logoutRedirect' => array('controller' => 'Campaigns', 'action' => 'pre_login'),
-	        //ログインページのパス
-	        'loginAction' => array('controller' => 'Campaigns', 'action' => 'pre_login'),
-	    )
 	);
-
-    public function beforeFilter() {
-        parent::beforeFilter();
-        $this->Auth->allow('email_signup','email_login','policy','facebook','createFacebook','logout','index');
-    }
 
 	public function index() {
 
