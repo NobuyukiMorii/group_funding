@@ -50,7 +50,7 @@ class UsersController extends AppController {
 
 	}
 	//emailアドレスでログイン
-	public function login() {
+	public function email_login() {
 		//レイアウトは使う
 		$this->layout = 'jquerymobile';
 		//ビューは表示する
