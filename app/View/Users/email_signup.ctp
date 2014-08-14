@@ -14,7 +14,7 @@
 		<!-- テキスト（大） -->
 		<h2 class="login_description">Group Funをはじめる</h2>
 		<!-- テキスト（小） -->
-		<p class="login_description_small">ログインは<a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'email_login')) ;?>" rel="external">こちら</a>から</p>
+		<p class="login_description_small">ログインは<a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'login')) ;?>" rel="external">こちら</a>から</p>
 		<!-- フォーム -->
 		<form action="<?php echo $this->Html->url('email_signup');?>" method="post" class="login_form_mobile" data-ajax="false">
 			<fieldset>
