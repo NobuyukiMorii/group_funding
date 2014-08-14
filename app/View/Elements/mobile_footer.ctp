@@ -3,7 +3,7 @@
         <ul>
 			<li><a href="<?php echo $this->Html->url("home") ?>" data-icon="bullets" rel="external"></a></li> 
 			<li><a href="<?php echo $this->Html->url('create') ;?>" data-icon="edit" rel="external"></a></li> 
-			<li><a href="#" data-icon="user"></a></li> 
+			<li><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'profile')) ;?>" data-icon="user" rel="external"></a></li> 
         </ul>
     </div>
 </div>

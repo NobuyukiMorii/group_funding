@@ -31,8 +31,9 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-
-	public $components = array('DebugKit.Toolbar','PageTitle','Session');
+	//コンポーネントの定義
+	public $components = array(
+			'DebugKit.Toolbar','PageTitle','Session');
 
 	//ページタイトルの定義
     public function beforeRender() {

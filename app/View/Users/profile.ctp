@@ -1,0 +1,1 @@
+<a href="<?php echo $this->Html->url(array('controller' => 'Users', 'action' => 'logout')) ;?>" rel="external">ログアウト</a>

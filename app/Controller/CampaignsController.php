@@ -17,7 +17,7 @@ class CampaignsController extends AppController {
             'secret' => '65b2a9a9645ae2c741678da3bc79246d'
         ));
     }
-    
+
 	//ページタイトル
 	public function index() {
 		//レイアウトは使う
@@ -28,7 +28,7 @@ class CampaignsController extends AppController {
 
 	}
 
-	//ログインしていないt時の画面
+	//ログインしていない時の画面
 	public function pre_login() {
 		//レイアウトは使う
 		$this->layout = 'jquerymobile';
@@ -51,6 +51,8 @@ class CampaignsController extends AppController {
 		$this->layout = 'jquerymobile';
 		//ビューは表示する
         $this->autoRender = true;
+        //ログインユーザーの情報を取得
+
         //FBに接続
         $facebook = $this->createFacebook(); //【2】アプリに接続
         $myFbData = $this->Session->read('mydata');       //【3】facebookのデータ
