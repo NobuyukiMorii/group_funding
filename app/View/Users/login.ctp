@@ -15,7 +15,7 @@
 		<h2 class="login_description">Group Funにログイン</h2>
 		<!-- テキスト（小） -->
 		<p class="login_description_small">サインアップは<a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'email_signup')) ;?>" rel="external">こちら</a>から</p>
-		<?php echo $this->Session->flash('auth'); ?>
+		<p class="canter"><?php echo $this->Session->flash('auth'); ?></p>
 		<!-- フォーム -->
 		<form action="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'login')) ;?>" method="post" class="login_form_mobile" data-ajax="false">
 			<fieldset>
