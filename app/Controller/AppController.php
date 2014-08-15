@@ -54,9 +54,20 @@ class AppController extends Controller {
 	    )
 	);
 	//DB接続前のフィルター
-    public function beforeFilter(){//login処理の設定
+    public function beforeFilter(){
+        //ログイン前にアクセス出来るページ
          $this->Auth->allow('email_signup','login','policy','facebook','createFacebook','logout','index');
-         $this->set('user',$this->Auth->user()); // ctpで$userを使えるようにする 。
+         $this->Auth->allow(array('controller' => 'users', 'action' => 'display', 'email_signup'));
+         $this->Auth->allow(array('controller' => 'users', 'action' => 'display', 'login'));
+         $this->Auth->allow(array('controller' => 'users', 'action' => 'display', 'policy'));
+         $this->Auth->allow(array('controller' => 'users', 'action' => 'display', 'facebook'));
+         $this->Auth->allow(array('controller' => 'users', 'action' => 'display', 'createFacebook'));
+         $this->Auth->allow(array('controller' => 'users', 'action' => 'display', 'logout'));
+         $this->Auth->allow(array('controller' => 'campaigns', 'action' => 'display', 'index'));
+         $this->Auth->allow(array('controller' => 'campaigns', 'action' => 'display', 'pre_login'));
+         $this->Auth->allow(array('controller' => 'campaigns', 'action' => 'display', 'detail'));
+         // ctpで$userを使えるようにする 。
+         $this->set('user',$this->Auth->user()); 
     }
 	//ページタイトルの定義
     public function beforeRender() {
