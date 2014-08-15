@@ -56,6 +56,7 @@ class AppController extends Controller {
          $this->Auth->allow(array('controller' => 'users', 'action' => 'display', 'createFacebook'));
          $this->Auth->allow(array('controller' => 'users', 'action' => 'display', 'logout'));
          $this->Auth->allow(array('controller' => 'campaigns', 'action' => 'display', 'index'));
+         $this->Auth->allow(array('controller' => 'campaigns', 'action' => 'display', 'image'));
          $this->Auth->allow(array('controller' => 'campaigns', 'action' => 'display', 'pre_login'));
          $this->Auth->allow(array('controller' => 'campaigns', 'action' => 'display', 'detail'));
          // ctpで$userを使えるようにする 。
