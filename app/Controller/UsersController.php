@@ -123,7 +123,8 @@ class UsersController extends AppController {
 
     //ログアウト処理
 	public function logout() {
-	$this->redirect($this->Auth->logout());
+	$this->Auth->logout();
+	$this->redirect(array('controller'=>'Campaigns','action'=>'pre_login'));
 	$this->Session->destroy(); //セッションを完全削除
 	}
 

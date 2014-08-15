@@ -43,14 +43,6 @@ class AppController extends Controller {
                     'fields' => array('username' => 'email','password' => 'password')
                 )
             ),
-            //ログイン後の移動先
-            'loginRedirect' => array('controller' => 'campaigns', 'action' => 'home'),
-            //ログアウト後の移動先
-            'logoutRedirect' => array('controller' => 'campaigns', 'action' => 'pre_login'),
-            //ログインページのパス
-            'loginAction' => array('controller' => 'campaigns', 'action' => 'pre_login'),
-            //未ログイン時のメッセージ
-            'authError' => 'あなたのお名前とパスワードを入力して下さい。',
 	    )
 	);
 	//DB接続前のフィルター
