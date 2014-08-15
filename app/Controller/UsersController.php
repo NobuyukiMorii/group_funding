@@ -39,7 +39,7 @@ class UsersController extends AppController {
         //postされたらログインする
 	    if ($this->request->is('post')) {
 	        if ($this->Auth->login()) {
-	            $this->redirect($this->Auth->redirect());
+	            $this->redirect(array('controller'=>'Campaigns','action'=>'home'));
 	        } else {
 	            $this->Session->setFlash(__('ログインに失敗しました。'));
 	        }
@@ -89,7 +89,7 @@ class UsersController extends AppController {
 				//ログインする
 				$this->Auth->login($update_data);
 				//リダイレクトする
-				$this->redirect($this->Auth->redirect());
+				$this->redirect(array('controller'=>'Campaigns','action'=>'home'));
             } else {
 	            //変数を加工
 	            $fb_data['User']['fb_id'] = $me['id'];
