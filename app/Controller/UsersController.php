@@ -79,21 +79,32 @@ class UsersController extends AppController {
             //ユーザ情報をセッションに保存
             $this->Session->write('mydata',$me);
             $this->Session->write('friendsdata',$friends);
-            //Userモデルに、同じidがあるかどうか検索
-            $res = $this->User->find('first',array('User' => array('User.fb_id' => $me['id'])));
+            //Userテーブルに、同じidがあるかどうか検索
+            $res = $this->User->find('all', 
+            	array(
+            		'conditions' => array('User.fb_id' => $me['id']),
+            		'limit' => 1,
+            		'fields' => array('User.id', 'User.fb_id','User.email'),
+    			)
+    		);
             //既にユーザー登録されている場合
-            if($me['id'] == $res['User']['fb_id']) {
+            var_dump($me['id']);
+            var_dump($res);
+            exit;
+            if($me['id'] == $res['fb_id']) {
 				// 更新する内容を設定
-				$data = array('User' => array('id' => $res['User']['id'], 'email' => $me['email']));
+				$data = array('User' => array('id' => $res['id'], 'email' => $me['email']));
 				// 更新する項目（フィールド指定）
 				$fields = array('email');
 				// 更新
-				$update_data = $this->User->save($data, false, $fields);
+				$update_data = $this->User->find($data, false, $fields);
 				//ログインする
 				$this->Auth->login($update_data);
 				//リダイレクトする
 				$this->redirect(array('controller'=>'Campaigns','action'=>'home'));
             } else {
+            	var_dump($res);
+            	exit;
 	            //変数を加工
 	            $fb_data['User']['fb_id'] = $me['id'];
 	            $fb_data['User']['email'] = $me['email'];
@@ -125,8 +136,14 @@ class UsersController extends AppController {
 
     //ログアウト処理
 	public function logout() {
+	//facebook apiにアクセス
+	$this->facebook = $this->createFacebook();
+	//セッションを削除する
+	$this->facebook->destroySession(); 
+	//ログアウトする
 	$this->Auth->logout();
-	$this->Session->destroy(); //セッションを完全削除
+	//emailログインした人のセッションを削除
+	$this->Session->destroy();
 	$this->redirect(array('controller'=>'Campaigns','action'=>'pre_login'));
 	
 	}
