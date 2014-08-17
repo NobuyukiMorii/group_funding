@@ -7,6 +7,7 @@ class UsersController extends AppController {
 
 	public $components = array(
 	    'DebugKit.Toolbar', //デバッグきっと
+	    'Common'
 	);
 
 	public function index() {
@@ -111,11 +112,22 @@ class UsersController extends AppController {
 	        }
 	        //saveが終わったらホーム画面にリダイレクトする
             $this->redirect(array('controller' => 'Campaigns', 'action' => 'home'));
-        } else {//認証前
+        } else {
+        	//認証前
+            //リダイレクト後のアドレスを規定
+        	$redirect_url = $this->Common->get_my_position();
         	//スコープの確認
-            $url = $this->facebook->getLoginUrl(array('scope' => 'email,publish_stream','canvas' => 1,'fbconnect' => 0));
+            $url = $this->facebook->getLoginUrl(
+            	array(
+            		'scope' => 'email,publish_stream',
+            		'canvas' => 1,
+            		'fbconnect' => 0,
+            		'redirect_uri' => $redirect_url
+            	)
+            );
+            //リダイレクトする
             $this->redirect($url);
-        	}
+        }
     }
 
  	//Facebookに接続(appID, secretを記述)

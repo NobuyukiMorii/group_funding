@@ -23,5 +23,9 @@ class CommonComponent extends Component {
         return $my_protocol;
     }
 
+    //現在の自分のアドレスを取得
+    public function get_my_position() {
+        return ((empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
+    }
 
 }
