@@ -14,6 +14,7 @@
       		</div>
       	<!--パネル（コンテンツ領域）を準備-->
         <?php pr($myFbData) ;?>
+        <?php pr($friendsFbData) ;?>
       		<div id="world" class="ui-body ui-body-a content">
         		<?php echo $this->element('world'); ?>
       		</div>

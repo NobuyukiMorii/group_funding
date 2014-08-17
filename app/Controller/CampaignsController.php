@@ -54,9 +54,12 @@ class CampaignsController extends AppController {
         //ログインユーザーの情報を取得
 
         //FBに接続
-        $facebook = $this->createFacebook(); //【2】アプリに接続
-        $myFbData = $this->Session->read('mydata');       //【3】facebookのデータ
-        $this->set('myFbData', $myFbData);
+        $facebook = $this->createFacebook();
+        //ログインしている自分とその人の友達のデータをセッションから取得
+        $myFbData = $this->Session->read('mydata');
+        $friendsFbData = $this->Session->read('friendsdata');
+        //データをビューに渡す
+        $this->set(compact('myFbData', 'friendsFbData'));
         //登録されているキャンペーンを全て検索する
         $this->Paginator->settings = array(
         	'conditions' => array('Campaign.status' => 0),

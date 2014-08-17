@@ -68,18 +68,21 @@ class UsersController extends AppController {
     public function facebook(){
         $this->autoRender = false;
         $this->facebook = $this->createFacebook();
-        //ユーザ情報取得
+        //ユーザ情報取得しますよと言う
         $user = $this->facebook->getUser();
         //認証後
         if($user){
         	//ユーザ情報を日本語で取得
-            $me = $this->facebook->api('/me','GET',array('locale'=>'ja_JP'));
+            $me = $this->facebook->api('/me','GET');
+            //友達の情報を取得
+            $friends = $this->facebook->api('/me/friends?fields=id,name,birthday');
             //ユーザ情報をセッションに保存
             $this->Session->write('mydata',$me);
+            $this->Session->write('friendsdata',$friends);
             //Userモデルに、同じidがあるかどうか検索
             $res = $this->User->find('first',array('User' => array('User.fb_id' => $me['id'])));
             //既にユーザー登録されている場合
-            if(isset($res) && is_array($res)) {
+            if($me['id'] == $res['User']['fb_id']) {
 				// 更新する内容を設定
 				$data = array('User' => array('id' => $res['User']['id'], 'email' => $me['email']));
 				// 更新する項目（フィールド指定）
@@ -106,9 +109,8 @@ class UsersController extends AppController {
 	        //saveが終わったらホーム画面にリダイレクトする
             $this->redirect(array('controller' => 'Campaigns', 'action' => 'home'));
         } else {//認証前
-            $url = $this->facebook->getLoginUrl(array(
-           	//スコープの確認
-            'scope' => 'email,publish_stream','canvas' => 1,'fbconnect' => 0));
+        	//スコープの確認
+            $url = $this->facebook->getLoginUrl(array('scope' => 'email,publish_stream','canvas' => 1,'fbconnect' => 0));
             $this->redirect($url);
         	}
     }
