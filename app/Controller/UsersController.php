@@ -87,24 +87,16 @@ class UsersController extends AppController {
             		'fields' => array('User.id', 'User.fb_id','User.email'),
     			)
     		);
-            //既にユーザー登録されている場合
-            var_dump($me['id']);
-            var_dump($res);
-            exit;
-            if($me['id'] == $res['fb_id']) {
+            if($res != array()) {
 				// 更新する内容を設定
-				$data = array('User' => array('id' => $res['id'], 'email' => $me['email']));
+				$data = array('User' => array('id' => $res[0]['User']['id'], 'email' => $me['email']));
 				// 更新する項目（フィールド指定）
 				$fields = array('email');
-				// 更新
-				$update_data = $this->User->find($data, false, $fields);
 				//ログインする
-				$this->Auth->login($update_data);
+				$this->Auth->login($res);
 				//リダイレクトする
 				$this->redirect(array('controller'=>'Campaigns','action'=>'home'));
             } else {
-            	var_dump($res);
-            	exit;
 	            //変数を加工
 	            $fb_data['User']['fb_id'] = $me['id'];
 	            $fb_data['User']['email'] = $me['email'];
