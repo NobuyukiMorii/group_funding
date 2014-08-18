@@ -4,6 +4,7 @@
     <?php echo $this->Html->charset(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><?php echo $title_for_layout; ?></title>
     <?php echo $this->Html->css('orange.css');?>
     <?php echo $this->Html->css('jquery.mobile.icons.min.css');?>

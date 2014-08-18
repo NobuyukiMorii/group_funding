@@ -3,7 +3,7 @@
 
 	<!-- コンテンツの読み込み -->
   	<div role="main" class="ui-content">
-        <form action="<?php echo $this->Html->url('create_confirm');?>" method="post" enctype='multipart/form-data' data-ajax="false" id="form" class="create_form_mobile">
+        <form action="<?php echo $this->Html->url('create_confirm');?>" method="post" enctype='multipart/form-data' data-ajax="false" id="form" class="create_form_mobile"  data-ajax="false">
 
             <!-- お金の集め方 -->
             <fieldset data-role="controlgroup" data-type="horizontal" data-role="fieldcontain">
@@ -20,7 +20,7 @@
             <!-- 期限 -->
             <legend>期限</legend>
             <!-- 初期値はn日後ぼ日付 -->
-            <input type="date" name="data[Campaign][time_limit]" data-mini=“true” value="<?php echo $this->Common->day(1);?>" />
+            <input type="date" name="data[Campaign][time_limit]" data-mini=“true” value="<?php echo $this->Common->day(7);?>" />
             <!-- 詳細 -->
             <legend>説明</legend>
             <textarea name="data[Campaign][description]" value="" data-mini=“true”></textarea>
