@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
     <?php echo $this->Html->css('style.css');?>
     <?php echo $this->Html->script('jquery-2.1.1.js');?>
+    <?php echo $this->Html->script('MobileConfig.js');?>
     <?php echo $this->Html->script('jquery.mobile-1.4.3.js');?>
 	<?php echo $this->fetch('meta');?>
 	<?php echo $this->fetch('css');?>

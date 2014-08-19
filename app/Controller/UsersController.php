@@ -76,7 +76,7 @@ class UsersController extends AppController {
         	//ユーザ情報を日本語で取得
             $me = $this->facebook->api('/me','GET');
             //友達の情報を取得
-            $friends = $this->facebook->api('/me/friends?fields=id,name,birthday');
+            $friends = $this->facebook->api('/me/friends');
             //ユーザ情報をセッションに保存
             $this->Session->write('mydata',$me);
             $this->Session->write('friendsdata',$friends);

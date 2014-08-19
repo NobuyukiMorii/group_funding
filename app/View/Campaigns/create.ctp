@@ -3,7 +3,7 @@
 
 	<!-- コンテンツの読み込み -->
   	<div role="main" class="ui-content">
-        <form action="<?php echo $this->Html->url('create_confirm');?>" method="post" enctype='multipart/form-data' data-ajax="false" id="form" class="create_form_mobile"  data-ajax="false">
+        <form action="<?php echo $this->Html->url('create_confirm');?>" method="post" enctype='multipart/form-data' data-ajax="false" id="form" class="create_form_mobile" data-ajax="false">
 
             <!-- お金の集め方 -->
             <fieldset data-role="controlgroup" data-type="horizontal" data-role="fieldcontain">
