@@ -140,16 +140,29 @@ class UsersController extends AppController {
 
     //ログアウト処理
 	public function logout() {
-	//facebook apiにアクセス
-	$this->facebook = $this->createFacebook();
-	//セッションを削除する
-	$this->facebook->destroySession(); 
-	//ログアウトする
-	$this->Auth->logout();
-	//emailログインした人のセッションを削除
-	$this->Session->destroy();
-	$this->redirect(array('controller'=>'Campaigns','action'=>'pre_login'));
-	
+		//facebook apiにアクセス
+		$this->facebook = $this->createFacebook();
+		//セッションを削除する
+		$this->facebook->destroySession(); 
+		//ログアウトする
+		$this->Auth->logout();
+		//emailログインした人のセッションを削除
+		$this->Session->destroy();
+		$this->redirect(array('controller'=>'Campaigns','action'=>'pre_login'));
 	}
+
+    //ログアウト処理
+	public function admin_user_list() {
+		//レイアウトは使う
+		$this->layout = 'jquerymobile';
+		//ビューは表示する
+        $this->autoRender = true;
+        //全ユーザーの情報を選択する
+        $data = $this->User->find('all');
+        //ビューに渡す
+        $this->set(compact('data'));
+
+	}
+
 
 }
