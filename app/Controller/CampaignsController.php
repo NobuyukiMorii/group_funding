@@ -145,7 +145,7 @@ class CampaignsController extends AppController {
 	//作成フォーム
 	public function create() {
 		//レイアウトは使う
-		$this->layout = 'jquerymobile';
+		//$this->layout = 'jquerymobile';
 		//ビューは表示する
         $this->autoRender = true;
 
@@ -153,7 +153,7 @@ class CampaignsController extends AppController {
 	//確認画面
 	public function create_confirm() {
 		//レイアウトは使う
-		$this->layout = 'jquerymobile';
+		//$this->layout = 'jquerymobile';
 		//ビューは表示する
         $this->autoRender = true;
 		//データがポストされなかった時の処理
