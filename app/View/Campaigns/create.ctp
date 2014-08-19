@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <?php echo $this->Html->script('create') ;?>
 <div data-role="page" data-theme="a">
 

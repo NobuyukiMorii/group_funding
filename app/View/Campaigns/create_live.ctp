@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <style type="text/css">
 .background_img {
 	width: 100%;
