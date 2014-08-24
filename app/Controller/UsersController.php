@@ -29,8 +29,8 @@ class UsersController extends AppController {
                 $this->Session->setFlash(__('登録に失敗しました。申し訳ございませんが、もう一入力して下さい。'));
             }
         }
-
 	}
+
 	//emailアドレスでログイン
 	public function login() {
 		//レイアウトは使う
@@ -114,12 +114,12 @@ class UsersController extends AppController {
             $this->redirect(array('controller' => 'Campaigns', 'action' => 'home'));
         } else {
         	//認証前
-            //リダイレクト後のアドレスを規定
+            //リダイレクト後のURLを規定
         	$redirect_url = $this->Common->get_my_position();
         	//スコープの確認
             $url = $this->facebook->getLoginUrl(
             	array(
-            		'scope' => 'email,publish_stream',
+            		'scope' => 'publish_stream','user_friends',
             		'canvas' => 1,
             		'fbconnect' => 0,
             		'redirect_uri' => $redirect_url
